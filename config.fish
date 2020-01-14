@@ -1,5 +1,9 @@
 # set PATH
-set PATH $HOME/.cargo/bin $HOME/.tfenv/bin $HOME/.rbenv/bin $PATH
+set -x PATH $HOME/.cargo/bin $HOME/.tfenv/bin $PATH
+set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
+
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
 
 # use exa instead of ls
 alias ls='exa'
