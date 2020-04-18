@@ -1,11 +1,7 @@
-set -x DENO_INSTALL /Users/kp/.local
+set -x DENO_INSTALL $HOME/.local
 # set PATH
-set -x PATH $HOME/.cargo/bin $HOME/.tfenv/bin $PATH
-set -x PATH $HOME/.rbenv/bin $PATH
+set -x PATH $HOME/.cargo/bin  $PATH
 set -x PATH $DENO_INSTALL/bin $PATH
-
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
 
 # use exa instead of ls
 alias ls='exa'
